@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
             require('tboggs.after.plugin.telescope')
         end
 	}
-
+--[[
 	use({
 		'rose-pine/neovim',
 		as = 'rose-pine',
@@ -18,7 +18,15 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
             require('tboggs.after.plugin.colors')
 		end
-	})
+        	})
+--]]
+    use({
+        "folke/tokyonight.nvim",
+        as = 'tokyonight',
+        config = function()
+            vim.cmd('colorscheme tokyonight')
+        end
+    })
 
 	use{
 		'nvim-treesitter/nvim-treesitter',

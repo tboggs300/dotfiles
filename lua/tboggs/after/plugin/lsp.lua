@@ -40,7 +40,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {'tsserver', 'lua_ls', 'tflint'},
+	ensure_installed = {'tsserver', 'lua_ls', 'tflint', 'gopls', 'rust_analyzer'},
 	handlers = {
 		lsp.default_setup,
 		lua_ls = function()
