@@ -1,5 +1,6 @@
 require("tboggs.remap")
 require('tboggs.set')
+require('tboggs.floaterminal')
 local augroup = vim.api.nvim_create_augroup
 local tboggsGroup = augroup('tboggs', {})
 
