@@ -19,12 +19,23 @@ return require('packer').startup(function(use)
             require('tboggs.after.plugin.colors')
 		end
         	})
---]]
+
     use({
         "folke/tokyonight.nvim",
         as = 'tokyonight',
         config = function()
             vim.cmd('colorscheme tokyonight')
+        end
+    })
+]]--
+    use({
+        "sainnhe/gruvbox-material",
+        as = 'gruvbox-material',
+        config = function()
+            -- require('tboggs.after.plugin.colors')
+            vim.g.gruvbox_material_foreground = "original";
+            vim.g.gruvbox_material_enable_italic = 1;
+            vim.cmd.colorscheme('gruvbox-material');
         end
     })
 

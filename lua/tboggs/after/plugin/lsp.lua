@@ -41,7 +41,7 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
     automatic_installation = true,
-	ensure_installed = {'tsserver', 'lua_ls', 'terraformls', 'tflint', 'gopls', 'rust_analyzer'},
+	ensure_installed = {'ts_ls', 'lua_ls', 'terraformls', 'tflint', 'rust_analyzer'},
 	handlers = {
 		lsp.default_setup,
 		lua_ls = function()
@@ -49,8 +49,10 @@ require('mason-lspconfig').setup({
 			require('lspconfig').lua_ls.setup(lua_opts)
 		end,
         tflint = function()
-            vim.print('tflint')
             require('lspconfig').tflint.setup({});
+        end,
+        ts_ls = function()
+            require('lspconfig').ts_ls.setup({});
         end
 	}
 })
